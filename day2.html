@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        
+           <div>
+              <a href="index.html">Back To Home</a>
+            <H4 style="text-align: center;">DAY 2:Functions</H4>
+            <p style="text-align: center;">Goal: Reusable logic</p>
+            <h3>ONE:Temperature Converter</h3>
+            <script>
+             function celsiusToFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+             function fahrenheitToCelsius(fahrenheit){
+                return (fahrenheit - 32) * 5/9;
+             }
+             let choice = prompt("Type 1 for Celsius → Fahrenheit or 2 for Fahrenheit → Celsius");
+             if (choice === "1") {
+                let celsius = Number(prompt("Enter temperature in Celsius"));
+                let result = celsiusToFahrenheit(celsius);
+                alert(celsius + "°C = " + result + "°F")
+             }
+             else if (choice === "2"){
+                let fahrenheit = Number(prompt("Enter temperature in Fahrenheit"));
+                let result = fahrenheitToCelsius(fahrenheit);
+                alert(fahrenheit + "°F = " + result + "°C")
+             }
+             else{
+                alert ("Invalid choice")
+             }
+
+            </script>
+            
+           </div>
+           <div>
+            <h3>TWO:Username Formatter</h3>
+          <script>
+function formatUsername(name){
+    let lowerName = name.toLowerCase();  // fixed typo
+    let noSpaces = lowerName.replace(/\s+/g, "");
+    let randomNumber = Math.floor(Math.random() * 100);
+    return noSpaces + randomNumber;
+}
+
+// Ask user for name
+let fullName = prompt("Enter your full name");
+
+// Call the function and store result in 'username'
+let username = formatUsername(fullName);
+
+// Show the username
+alert("Your username is: " + username);
+</script>
+           </div>
+           <div>
+             <h3>THREE:Tip Calculator</h3>
+             <script>
+            function calculateTip(bill, tipPercent) {
+
+           let tipAmount = bill * (tipPercent / 100);
+           let total = bill + tipAmount;
+
+    return total;
+}
+         let billAmount = Number(prompt("Enter bill payment"));
+         let tipPercent = Number(prompt("Enter tip percentage "));
+          let totalPayment = calculateTip(billAmount, tipPercent);
+          alert("Total payment including tip: " + totalPayment);
+             </script>
+
+           </div>
+        
+    </body>
+</html>

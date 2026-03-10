@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+          <section>
+            <a href="index.html">Back To Home</a>
+            <H4 style="text-align: center;">DAY 1: Javascript Fundamentals</H4>
+            <p style="text-align: center;">Goal: Variables, data types, conditions</p>
+      <h3> ONE:Age checker</h3>
+       <script>
+        let age = prompt("Enter your age")
+        age = Number(age)
+        if (age < 13){
+            alert("child");
+              } else if (age >= 13 && age < 20) {
+                alert("Teen")
+              } else {
+                alert("adult")
+              }
+             </script>
+           </section>
+           
+           <section>
+            <h3>TWO:Even or Odd checker</h3>
+
+            <script>
+                let number = prompt("Enter a number")
+                number = Number(number);
+                if (isNaN(number)){
+                    alert("That's not a valid number !")
+                } else if (number % 2 === 0){
+                    alert(number + " is Even");
+                } else{
+                    alert(number + " is Odd");
+                }
+            </script>
+           </section>
+           <section>
+              <h3> THREE:Simple Calculator</h3>
+              <script>
+                let num1 = Number(prompt("Enter first number:"));
+                let num2 = Number(prompt("Enter second number:"));
+                 
+                let operation = prompt("choose operation: +, -, *, /");
+                let result;
+
+                if (operation === "+"){
+                result = num1 + num2;
+                }
+                else if (operation === "-"){
+                    result = num1 - num2;
+                }
+                else if (operation === "*"){
+                    result = num1 * num2;
+                }
+                else if (operation === "/"){
+                    if (num2 === 0){
+                        result = " cannot divide by zero"
+                    }
+                }
+               else if (operation === "/"){
+    if (num2 === 0){
+        result = "cannot divide by zero"
+    } else {
+        result = num1 / num2;
+    }
+}
+
+                    alert("result: " + result)
+              </script>
+           </section>
+
+
+    </body>
+</html>

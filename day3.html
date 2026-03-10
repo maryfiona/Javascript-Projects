@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        
+           <section>
+              <a href="index.html">Back To Home</a>
+            <H4 style="text-align: center;">DAY 3: Arrays & Loops</H4>
+            <p style="text-align: center;">Goal: Data handling</p>
+      <h3> ONE:To-Do List (Console Version)
+</h3>
+<script>
+
+let tasks = [];
+
+function showTasks() {
+    console.log("Your Tasks:");
+
+    for (let i = 0; i < tasks.length; i++) {
+        console.log(i + ": " + tasks[i]);
+    }
+}
+
+function addTask() {
+    let task = prompt("Enter new task:");
+    tasks.push(task);
+}
+
+function removeTask() {
+    let index = Number(prompt("Enter task number to remove:"));
+    tasks.splice(index, 1);
+}
+
+let running = true;
+
+while (running) {
+
+    let choice = prompt(
+        "Choose option:\n1. Add Task\n2. Remove Task\n3. Show Tasks\n4. Exit"
+    );
+
+    if (choice === "1") {
+        addTask();
+    }
+
+    else if (choice === "2") {
+        removeTask();
+    }
+
+    else if (choice === "3") {
+        showTasks();
+    }
+
+    else if (choice === "4") {
+        running = false;
+    }
+
+    else {
+        alert("Invalid option");
+    }
+}
+
+</script>
+           </section>
+           <section>
+            <h3>TWO:Student Score Average</h3>
+                <script>
+
+let scores = [];
+
+let scoreCount = Number(prompt("How many scores do you want to enter?"));
+
+for (let i = 0; i < scoreCount; i++) {
+    let score = Number(prompt("Enter score " + (i + 1)));
+    scores.push(score);
+}
+
+let total = 0;
+
+for (let i = 0; i < scores.length; i++) {
+    total += scores[i];
+}
+
+let average = total / scores.length;
+
+alert("Average Score: " + average);
+
+</script>
+        
+           </section>
+           <section>
+            <h3>THREE:Random Name Picker</h3>
+            <script>
+                let names = [];
+
+let nameCount = Number(prompt("How many friends?"));
+
+for (let i = 0; i < nameCount; i++) {
+    let name = prompt("Enter friend name:");
+    names.push(name);
+}
+
+let randomIndex = Math.floor(Math.random() * names.length);
+
+let winner = names[randomIndex];
+
+alert("Selected person: " + winner);
+
+            </script>
+           </section>
+        
+    </body>
+</html>
